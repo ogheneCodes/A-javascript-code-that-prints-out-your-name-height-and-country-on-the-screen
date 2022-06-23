@@ -10,7 +10,7 @@
             main{
                 width: 60%;
                 margin: 125px auto;
-                background-color: burlywood;
+                background-color:azure;
                 color: black;
                 height: 70vh;
             }
@@ -22,15 +22,15 @@
 
             }
             #result{
-                background-color:azure;
                 margin: 0px auto;
-                width: 30%;
+                width: 100%;
+                font-size: large;
+                text-align: center;
             }
             #button-container{
                 width: 30%;
                 margin: 10px auto;
-                
-                background-color: yellow;
+                margin-top: 25px;
             }
             button{
                 width: 100%;
@@ -49,25 +49,23 @@
             <h2>Write a javascript code that prints out your name, height, and country on the screen</h2>
             <div id="result">
                 <p id="demo1"></p>
-                <p id="demo2"></p>
-                <p id="demo3"></p>
             </div>
             <div id="button-container">
-                <button onclick="myFunction()">Click the button to demonstrate the prompt box.</button>
+                <button onclick="myFunction()">Click to enter your details</button>
             </div>
         </main>
 
         <script>
             function myFunction() {
-                let name = prompt("Please enter your name" );
-                let height = prompt("Please enter your height");
-                let country = prompt("Please enter your country");
+                let name = prompt("Please Enter Your Name" );
+                let height = prompt("Please Enter Your Height");
+                let country = prompt("Please Enter Your Country");
                 
                 let person = `${name}, ${height}, ${country} `
             
                 if (person != null) {
                     document.getElementById("demo1").innerHTML =
-                        `My name is ${name} <br> My height is ${height} <br> My country name is: ${country}`;
+                    `My name is ${name} <br> My height is ${height}cm <br> My country name is: ${country}`;
                 }
                 
             }
