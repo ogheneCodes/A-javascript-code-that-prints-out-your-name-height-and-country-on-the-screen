@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Zuri javascript Intro</title>
+
+        <style>
+            main{
+                width: 60%;
+                margin: 125px auto;
+                background-color: burlywood;
+                color: black;
+                height: 70vh;
+            }
+            main > h2{
+                text-align: center;
+                margin-top: 120px;
+            }
+            p{
+
+            }
+            #result{
+                background-color:azure;
+                margin: 0px auto;
+                width: 30%;
+            }
+            #button-container{
+                width: 30%;
+                margin: 10px auto;
+                
+                background-color: yellow;
+            }
+            button{
+                width: 100%;
+                height: 70px;
+                border-radius: 5px;
+                color:white;
+                background-color: black;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <main>
+            
+            <h2>Write a javascript code that prints out your name, height, and country on the screen</h2>
+            <div id="result">
+                <p id="demo1"></p>
+                <p id="demo2"></p>
+                <p id="demo3"></p>
+            </div>
+            <div id="button-container">
+                <button onclick="myFunction()">Click the button to demonstrate the prompt box.</button>
+            </div>
+        </main>
+
+        <script>
+            function myFunction() {
+                let name = prompt("Please enter your name" );
+                let height = prompt("Please enter your height");
+                let country = prompt("Please enter your country");
+                
+                let person = `${name}, ${height}, ${country} `
+            
+                if (person != null) {
+                    document.getElementById("demo1").innerHTML =
+                        `My name is ${name} <br> My height is ${height} <br> My country name is: ${country}`;
+                }
+                
+            }
+        </script>
+    </body>
+
+</html>
+
+<!-- if (height != null) {
+    document.getElementById("demo1").innerHTML =
+        `My height is ${height}`;
+}
+if (height != null) {
+    document.getElementById("demo1").innerHTML =
+        `My country name is: ${country}`;
+} -->
